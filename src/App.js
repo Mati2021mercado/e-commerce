@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          tienda e-commerce por Matias Mercado
         </a>
       </header>
     </div>
