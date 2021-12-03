@@ -6,8 +6,6 @@ const navListStyle = {
 }
 
 const navListItemStyle = {
-    textDecoration: 'none',
-    color: "white",
     listStyle:"none",
     padding : "8px",
     margin : "0px 5px"
@@ -21,7 +19,10 @@ function NavBar() {
     <ul style={navListStyle}>
         { 
         navListItems.map( (index) => (
-            <li className="list__item" style={navListItemStyle}>{index}</li>
+            <li className="list__item" style={navListItemStyle}>
+                <a href="#" style={{color: "white",textDecoration: 'none'}}>{index}
+                </a>
+            </li>
         ))
         
         }
