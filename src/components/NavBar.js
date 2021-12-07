@@ -1,4 +1,7 @@
 import React from 'react';
+import CartWidget from './CartWidget';
+
+
 
 const navListStyle = {
     display : "flex",
@@ -13,22 +16,28 @@ const navListItemStyle = {
 
 const navListItems = ["Inicio", "Home", "Nosotros", "Contacto", "Registrarse"]
 
-function NavBar() {
-    return <nav>
-    
-    <ul style={navListStyle}>
-        { 
-        navListItems.map( (index) => (
-            <li className="list__item" style={navListItemStyle}>
-                <a href="#" style={{color: "white",textDecoration: 'none'}}>{index}
-                </a>
-            </li>
-        ))
-        
-        }
-    </ul>
 
-    </nav>
+
+function NavBar() {
+    return (
+        <>
+            <CartWidget/>
+            
+            <nav>
+                <ul style={navListStyle}>
+                    { 
+                    navListItems.map( (index) => (
+                        <li className="list__item" style={navListItemStyle}>
+                            <a href="#" style={{color: "white",textDecoration: 'none'}}>{index}
+                            </a>
+                        </li>
+                    ))
+                    
+                    }
+                </ul>
+        </nav>
+        </>
+    )
 }
 
 export default NavBar;
