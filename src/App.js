@@ -3,8 +3,10 @@ import './App.css';
 import NavBar from './components/NavBar'
 import Pruebas from './components/Pruebas'
 import Parrafo from './components/Parrafo'
-
+import Estado from './components/Estado';
 import ItemListContainer from './components/ItemListContainer';
+import RenderCondicional from './components/RenderCondicional';
+import ContadorHooks from './components/ContadorHooks';
 
 
 function App() {
@@ -22,11 +24,12 @@ function App() {
 
             <Pruebas/>
 
-            <Parrafo numero="one"/>
-            <Parrafo numero="two"/>
-            <Parrafo numero="three"/>
+            <ContadorHooks/>
           
           </section>
+
+          <Estado/>
+          <RenderCondicional/>
       </main>
       
     </>
