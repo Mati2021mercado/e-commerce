@@ -26,9 +26,10 @@ export default function  ItemList() {
 
                         <div>{valorActual.name}</div>
                             
-                        <img height={150} src="https://st.depositphotos.com/1001555/2719/i/600/depositphotos_27190451-stock-photo-blank-computer-monitor.jpg"/>
+                        <img height={150} src={valorActual.img}/>
                         
-                        <p>{valorActual.price}</p>
+                        
+                        <p>Precio: (Usd)<b> {valorActual.price}</b></p>
 
                 </div>
                 
@@ -45,3 +46,4 @@ const productStyle = {
 }
 
 
+// <img height={150} src="https://st.depositphotos.com/1001555/2719/i/600/depositphotos_27190451-stock-photo-blank-computer-monitor.jpg"/>

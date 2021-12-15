@@ -1,5 +1,5 @@
 import React from 'react';
-import image from './images/pcImage.jpg';
+import image from './Img/pcImage.jpg';
 
 const CartWidget = ()=> (
     <div>
