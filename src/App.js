@@ -13,19 +13,20 @@ function App() {
       <header>
           
           <NavBar/>
-          <ItemListContainer greeting="este es un mensaje desde la prop greeting"/>
+          
       </header>
 
       <main>
           <h1 style={{textAlign:'center'}}>Tienda Web</h1>
           <section>
-
+          <ItemListContainer greeting="este es un mensaje desde la prop greeting"/>
             <Pruebas/>
+          </section>
+
+
+          <ItemCount stock={5} initial={1}/>
 
           
-          
-          </section>
-          <ItemCount stock={5} initial={1}/>
 
       </main>
       

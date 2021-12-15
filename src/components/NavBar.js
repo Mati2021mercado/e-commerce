@@ -16,8 +16,6 @@ const navListItemStyle = {
 
 const navListItems = ["Inicio", "Home", "Nosotros", "Contacto", "Registrarse"]
 
-
-
 function NavBar() {
     return (
         <>
