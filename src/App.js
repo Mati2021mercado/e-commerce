@@ -2,11 +2,9 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import Pruebas from './components/Pruebas'
-import Parrafo from './components/Parrafo'
-import Estado from './components/Estado';
 import ItemListContainer from './components/ItemListContainer';
-import RenderCondicional from './components/RenderCondicional';
-import ContadorHooks from './components/ContadorHooks';
+import ItemCount from './components/ItemCount';
+
 
 
 function App() {
@@ -24,12 +22,11 @@ function App() {
 
             <Pruebas/>
 
-            <ContadorHooks/>
+          
           
           </section>
+          <ItemCount stock={5} initial={1}/>
 
-          <Estado/>
-          <RenderCondicional/>
       </main>
       
     </>
