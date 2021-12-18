@@ -1,18 +1,8 @@
-import { useState } from "react"
-import Items from "./Item"
 
+// ITEMLISTCOINTAINER ME PASA COMO PROP EL STATE Y LO MAPEO, LUEGO LO RENDERIZO EN APP
 
-export default function  ItemList() {
-    const [state, setState] = useState([])
-    
-    const arrAux = new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            setState(Items)
-            resolve(true)
-        },2000)
-    })
-
-    arrAux.then()
+export default function  ItemList({state}) {
+    // const [state, setState] = useState([])
 
     return (
         <div>
