@@ -1,0 +1,25 @@
+
+export default function App() {
+
+  const getApi = async ()=> {
+    const API = await fetch("https://pokeapi.co/api/v2/pokemon")
+    const res = await API.json()
+    return res
+  }
+
+  const [state, setState] = useState([])
+
+  useEffect(()=>{
+    getApi()
+      .then((res)=>{
+        setState(res.results)
+        console.log(res.results)
+      })
+  },[])
+  return (
+    <>
+    
+    {state.map((value)=>{ return <div>{value.name}</div>})}
+    </>
+  );
+}
