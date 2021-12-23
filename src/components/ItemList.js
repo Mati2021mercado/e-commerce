@@ -1,17 +1,18 @@
 import Item from './Item';
-// ITEMLISTCOINTAINER ME PASA COMO PROP EL STATE Y LO MAPEO, LUEGO LO RENDERIZO EN APP
 
-export default function  ItemList({state}) {
+export default function  ItemList({list}) {
 
     return (
         <>
-        
-        <div>
+            <div>
+                {list.map(producto => 
+                    <>
+                        <Item key={producto.id + "list"} producto={producto} />
 
-            {state.map(valorActual => <Item key={valorActual.id} 
-                valorActual={valorActual} />)}
-            
-        </div>
+                        
+                    </>
+                )}
+            </div>
         </> 
     )
 }

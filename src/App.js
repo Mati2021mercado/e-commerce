@@ -2,10 +2,8 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import Pruebas from './components/Pruebas'
-import ItemCount from './components/ItemCount';
-import ItemList from './components/ItemList'
 import ItemListContainer from './components/ItemListContainer';
-
+import ItemDetailContainer from './components/ItemsDetailContainer';
 
 
 function App() {
@@ -23,13 +21,13 @@ function App() {
 
           <ItemListContainer/>
 
+          <br/>
+
+          <ItemDetailContainer />
+
             <Pruebas/>
           </section>
 
-
-          <ItemCount stock={5} initial={1}/>
-
-          
 
       </main> 
       

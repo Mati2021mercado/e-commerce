@@ -7,31 +7,41 @@ const ModalSub = ()=> <h3>No valido</h3>
 
 export default function ItemCount({stock, initial}) {
     const [valorInicial, setValorInicial] = useState(initial);
-    const [showModalAdd, setShowModalAdd] = useState(false);
-    const [showModalSub, setShowModalSub] = useState(false);
+    // const [showModalAdd, setShowModalAdd] = useState(false);
+    // const [showModalSub, setShowModalSub] = useState(false);
 
     const handlerAdd = ()=> {
         if(valorInicial < stock){setValorInicial((initial) => initial + 1)}
-        else setShowModalAdd((showModalAdd) => !showModalAdd)  
+        else alert("Stock maximo alcanzado")
+        // setShowModalAdd((showModalAdd) => !showModalAdd)  
     }
 
     const handlerSub = () => {
         if(valorInicial > 1){setValorInicial((prev) => prev - 1)}
-        else setShowModalSub((showModalSub) => !showModalSub) 
+        else alert("No valido")
+        // setShowModalSub((showModalSub) => !showModalSub) 
     }
 
     return(
-        <div>
+        <div style={stockStyle}>
             <button onClick={handlerAdd}>Sumar</button>
 
             <p>{valorInicial}</p>
 
             <button onClick={handlerSub}>Restar</button>
             
-            {showModalAdd && <ModalAdd/>}
-            {showModalSub && <ModalSub/>}
+            
         </div>
     )
 }
 
+// esto iria abajo del boton
+// {showModalAdd && <ModalAdd/>}
+// {showModalSub && <ModalSub/>}
+
+const stockStyle = {
+    display : "flex",
+    height : "35px",
+    justifyContent : "space-around"
     
+}

@@ -1,26 +1,27 @@
-const Item = ({ valorActual }) => {
+
+const Item = ({ producto }) => {
 
     return (
 
-                valorActual.id 
+                producto.id 
                 ? 
                 
-                <div style={productStyle} key={ valorActual.id + "b"}>
+                <div style={productStyle} key={ producto.id + ": productoList"}>
 
-                        <div>{valorActual.name}</div>
+                        <div>{ producto.name}</div>
                             
-                        <img height={150} src={valorActual.img}/>
+                        <img height={150} src={producto.img}/>
                         
-                        <p>Precio: (Usd)<b> {valorActual.price}</b></p>
+                        <p>Precio: (Usd)<b> {producto.price}</b></p>
 
                 </div>
                 
-                
-                : <div></div>
+                : <div> Algo salio mal </div>
 
     )
 }
 export default Item
+
 const productStyle = {
     margin : "5px",
     display : "inline-block"
