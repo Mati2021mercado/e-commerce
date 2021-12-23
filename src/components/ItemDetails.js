@@ -10,7 +10,7 @@ const ItemDetails = ({ detail }) => {
 
                 <div>{ detail.name }</div>
                     
-                <img height={150} src= { detail.img }/>
+                <img height={150} alt={ detail.name } src= { detail.img }/>
                 
                 <p>Precio: (Usd)<b>  {detail.price}</b></p>
 
